@@ -10,9 +10,8 @@ import static org.junit.jupiter.api.Assertions.*;
 @DisplayName("Класс Person")
 class PersonTest {
 
-    @Disabled
-    @Test
     @DisplayName("корректно создаётся")
+    @Test
     void initAngGet() {
         Person person = new Person(42, "Ivan");
         assertEquals("Ivan", person.getName());
