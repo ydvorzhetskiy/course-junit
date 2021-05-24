@@ -19,4 +19,14 @@ class PersonTest {
         assertThat(person)
                 .hasFieldOrPropertyWithValue("age", 42);
     }
+    
+    @DisplayName("Increment birthdate")
+    @Test
+    void increment() {
+        Person person = new Person(42, "Ivan");
+        person.birthDay();
+        assertThat(person)
+                .hasFieldOrPropertyWithValue("age", 43);
+    }
+    
 }
