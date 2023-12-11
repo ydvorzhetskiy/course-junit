@@ -5,14 +5,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.edu</groupId>
-    <artifactId>java-junit</artifactId>
+    <artifactId>course-junit</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <!-- Здесь находится много настроек, в частности maven-surefire-plugin -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.3.0.RELEASE</version>
+        <version>3.2.0</version>
         <relativePath/>
     </parent>
 
@@ -21,18 +21,11 @@
     </properties>
 
     <dependencies>
-        <!-- В этой зависимости и JUnit 5 (без JUnit 4), Mockito, AssertJ -->
+        <!-- В этой зависимости JUnit 5, Mockito, AssertJ -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
-            <exclusions>
-                <exclusion>
-                    <!-- Таким образом отключается Junit 4 -->
-                    <groupId>org.junit.vintage</groupId>
-                    <artifactId>junit-vintage-engine</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
     </dependencies>
 </project>
